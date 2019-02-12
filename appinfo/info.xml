@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+   <id>hsts</id>
+   <name>HSTS Header</name>
+   <summary>Add HSTS header to HTTPS response</summary>
+   <description>Add HSTS header to HTTPS response, if modheaders is not available.</description>
+   <version>0.1.0</version>
+   <licence>agpl</licence>
+   <author mail="klaus@jsxc.org">Klaus Herberth</author>
+
+   <types>
+     <prelogin/>
+   </types>
+
+   <category>tools</category>
+
+   <website>https://github.com/sualko/cloud_hsts/</website>
+   <bugs>https://github.com/sualko/cloud_hsts/issues</bugs>
+
+   <dependencies>
+     <nextcloud min-version="14" max-version="15" />
+   </dependencies>
+</info>
