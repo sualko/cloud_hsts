@@ -1,4 +1,6 @@
 # HTTP Strict Transport Security
+![GitHub All Releases](https://img.shields.io/github/downloads/sualko/cloud_hsts/total.svg)
+[![GitHub license](https://img.shields.io/github/license/sualko/cloud_piwik.svg)](https://github.com/sualko/cloud_piwik/blob/master/LICENSE)
 
 The only purpose of this [Nextcloud] application is to add the
 [Strict-Transport-Security] header to installations which do not support header
