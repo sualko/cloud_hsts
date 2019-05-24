@@ -18,6 +18,8 @@
    <website>https://github.com/sualko/cloud_hsts/</website>
    <bugs>https://github.com/sualko/cloud_hsts/issues</bugs>
 
+   <screenshot>https://raw.githubusercontent.com/sualko/cloud_hsts/master/img/screenshot.png</screenshot>
+
    <dependencies>
      <nextcloud min-version="14" max-version="16" />
    </dependencies>
