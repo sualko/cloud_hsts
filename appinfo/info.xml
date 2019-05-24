@@ -5,7 +5,7 @@
    <name>HSTS Header</name>
    <summary>Add HSTS header to HTTPS response</summary>
    <description>Add HSTS (HTTP Strict Transport Security) header to HTTPS response, if modheaders is not available.</description>
-   <version>0.1.0</version>
+   <version>0.2.0</version>
    <licence>agpl</licence>
    <author mail="klaus@jsxc.org">Klaus Herberth</author>
 
