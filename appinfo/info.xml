@@ -19,6 +19,6 @@
    <bugs>https://github.com/sualko/cloud_hsts/issues</bugs>
 
    <dependencies>
-     <nextcloud min-version="14" max-version="15" />
+     <nextcloud min-version="14" max-version="16" />
    </dependencies>
 </info>
