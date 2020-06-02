@@ -21,6 +21,6 @@
    <screenshot>https://raw.githubusercontent.com/sualko/cloud_hsts/master/img/screenshot.png</screenshot>
 
    <dependencies>
-     <nextcloud min-version="14" max-version="18" />
+     <nextcloud min-version="14" max-version="19" />
    </dependencies>
 </info>
