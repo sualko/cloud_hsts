@@ -4,7 +4,7 @@
    <name>HSTS Header</name>
    <summary>Add HSTS header to HTTPS response</summary>
    <description>Add HSTS (HTTP Strict Transport Security) header to HTTPS response, if modheaders is not available.</description>
-   <version>0.9.0</version>
+   <version>0.10.0</version>
    <licence>agpl</licence>
    <author mail="klaus@jsxc.org">Klaus Herberth</author>
    <namespace>HstsHeader</namespace>
@@ -21,6 +21,6 @@
    <screenshot>https://raw.githubusercontent.com/sualko/cloud_hsts/master/img/screenshot.png</screenshot>
 
    <dependencies>
-     <nextcloud min-version="14" max-version="25"/>
+     <nextcloud min-version="20" max-version="25"/>
    </dependencies>
 </info>
