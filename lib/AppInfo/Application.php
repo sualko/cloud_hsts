@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace OCA\HstsHeader\AppInfo;
 
+use OCP\IConfig;
 use OCP\AppFramework\App;
+use OCP\AppFramework\Http;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
@@ -24,12 +26,16 @@ class Application extends App implements IBootstrap
     public function boot(IBootContext $context): void
     {
         if (!$this->isModHeadersAvailable() && $this->isHTTPS()) {
-            $maxAge = \OC::$server->getConfig()->getSystemValue('hsts.maxAge', 15768000);
-            $includeSubDomains = \OC::$server->getConfig()->getSystemValue('hsts.includeSubDomains', false) ? '; includeSubDomains' : '';
-            $preload = \OC::$server->getConfig()->getSystemValue('hsts.preload', false) ? '; preload' : '';
-
-            header("Strict-Transport-Security: max-age=${maxAge}${includeSubDomains}${preload}");
+            $context->injectFn([$this, 'addHstsHeader']);
         }
+    }
+    
+	public function addHstsHeader(IConfig $config, IOutput $output): void {
+        $maxAge = $config->getSystemValue('hsts.maxAge', 15768000);
+        $includeSubDomains = $config->getSystemValue('hsts.includeSubDomains', false) ? '; includeSubDomains' : '';
+        $preload = $config->getSystemValue('hsts.preload', false) ? '; preload' : '';
+
+        $output->setHeader("Strict-Transport-Security: max-age=${maxAge}${includeSubDomains}${preload}");
     }
 
     private function isModHeadersAvailable()
