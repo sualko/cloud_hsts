@@ -1,6 +1,6 @@
 {
   "name": "@sualko/cloud_hsts",
-  "version": "0.9.0",
+  "version": "0.10.0-beta.1",
   "description": "Adds HSTS header to @nextcloud response",
   "main": "index.js",
   "scripts": {
